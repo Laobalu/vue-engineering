@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'g-loading'
+  name: 'loading'
 }
 </script>

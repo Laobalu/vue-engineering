@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .toast-wrap{
     background: #999;
     border-radius: 5px;

@@ -15,9 +15,9 @@ routerContext.keys().forEach(route => {
   if (route.startsWith('./index')) {
     return 0
   }
-  const routerModule = routerContext(route)
-  console.log(routerModule)
-  routes.push(...(routerModule.default))
+  const routerModule = routerContext(route).default
+  // console.log(routerModule)
+  routes.push(...(routerModule))
 })
 
 export default new Router({
