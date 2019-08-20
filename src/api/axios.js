@@ -28,6 +28,13 @@ service.interceptors.response.use(response => {
     return Promise.reject(response)
   }
 }, error => {
+  if (error.message.includes('timeout')) {
+    Toast({
+      type: 'error',
+      content: '请求超时！'
+    })
+    return Promise.reject(error)
+  }
   const responseCode = error.response.status
   switch (responseCode) {
     // 登录过期
