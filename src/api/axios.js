@@ -9,7 +9,7 @@ const service = axios.create({
 })
 
 // 请求前拦截
-service.interceptors.requset.use(config => {
+service.interceptors.request.use(config => {
   // http auth登录验证的一种方式，不安全也不常用，现在一般都用cookie session登录验证
   // token 验证，用户登录后会生成token，传给客户端保存在storage，请求发送时将token代入请求头，服务端验证过期
   const token = localStorage.getItem('token')
@@ -46,7 +46,7 @@ service.interceptors.response.use(response => {
         }
       })
       break
-      // 403: token过期
+    // 403: token过期
     case 403:
       Toast({
         type: 'error',

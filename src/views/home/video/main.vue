@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-  name: 'video'
+  name: 'videoComp'
 }
 </script>
 <style lang="scss" scoped>

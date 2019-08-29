@@ -1,19 +1,19 @@
 <template>
   <div class="home">
-    <h1>This is an home page</h1>
+    <h1>home page</h1>
     <loading></loading>
     <Banner></Banner>
-    <Video></Video>
+    <VideoComp></VideoComp>
   </div>
 </template>
 
 <script>
 import Banner from './banner'
-import Video from './video'
+import VideoComp from './video'
 export default {
   components: {
     Banner,
-    Video
+    VideoComp
   },
 
   mounted: function () {
